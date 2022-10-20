@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene background="color:black">
+        <a-camera position="0 9 10" rotation="0 0 0"></a-camera>
+
+        <a-assests>
+            <a-assets-item src="./assets/person/scene.gltf" id="girl"></a-assets-item>
+            <a-assests-item src="./assets/parkbank/scene.gltf" id="bench"></a-assests-item>
+            <a-assets-item src="./assets/cat/scene.gltf" id="cat"></a-assets-item>
+
+        </a-assests>
+
+        <a-sky color = "gray"></a-sky>
+        <a-entity>
+            <a-plane position="0 4 0" width="30" height="6" rotation="-90 0 0"
+                color = "black"
+                shadow="receive:true;">
+            </a-plane>
+        </a-entity>
+
+       
+           
+
+            <a-entity>
+                <a-entity gltf-model="#girl" scale="4 4 4" position="-6 8.2 0" rotation="-3 90 0"
+                shadow="cast:true;"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity gltf-model="#bench" position="8 4 -1.5" scale="3 3 3" rotation="0 -90 0"
+                shadow="cast:true;"></a-entity>
+            </a-entity>
+
+            <a-entity>
+                <a-entity gltf-model="#cat" position="4 4.78 1" scale="1 1 1" rotation="0 -80 0"
+                shadow="cast:true;"></a-entity>
+            </a-entity>
+
+
+
+            <a-entity
+        light="type: point; castShadow: true; color: #e6ca14; intensity: 2"
+        position="-7 8 1"
+      >
+      </a-entity>
+      <a-entity light="type: ambient;"> </a-entity>
+
+</body>
+
+</html>
